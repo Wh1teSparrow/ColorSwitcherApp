@@ -22,6 +22,15 @@ final class ViewController: UIViewController {
         colorView.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
     }
     @IBAction func setupColorSliders() {
+        let labels = [redLabel: redSlider, greenLabel: greenSlider, blueLabel: blueSlider]
+        
+        for (key, value) in labels {
+            key?.text = String(
+                format: "%.2f",
+                value?.value ?? ""
+            )
+        }
+        
         colorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
             green: CGFloat(greenSlider.value),

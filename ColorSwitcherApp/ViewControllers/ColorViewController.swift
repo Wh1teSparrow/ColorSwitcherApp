@@ -7,9 +7,17 @@
 
 import UIKit
 
-class ColorViewController: UIViewController {
+final class ColorViewController: UIViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let setColorVC = segue.destination as? SetColorViewController else { return }
+        setColorVC.color = CIColor(color: view.backgroundColor ?? .white)
+        setColorVC.delegate = self
+    }
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+extension ColorViewController: SetViewControllerDelegate {
+    func getColor(_ color: UIColor) {
+        view.backgroundColor = color
     }
 }

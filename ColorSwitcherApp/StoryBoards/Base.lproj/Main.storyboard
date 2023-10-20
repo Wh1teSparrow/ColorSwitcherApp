@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Set Color View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="ColorSwitcherApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SetColorViewController" customModule="ColorSwitcherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +89,7 @@
                                                 <rect key="frame" x="-2" y="35" width="200" height="31"/>
                                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                                 <connections>
-                                                    <action selector="setupColorSliders" destination="BYZ-38-t0r" eventType="valueChanged" id="138-7k-8pS"/>
+                                                    <action selector="setupColorSliders" destination="BYZ-38-t0r" eventType="valueChanged" id="xJD-Aa-9H1"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UgR-9O-zTU">
@@ -110,6 +110,9 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="toJ-ep-8dE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -158,10 +161,10 @@
             </objects>
             <point key="canvasLocation" x="-1558" y="-27"/>
         </scene>
-        <!--View Controller-->
+        <!--Color View Controller-->
         <scene sceneID="K4R-Lp-3IT">
             <objects>
-                <viewController id="Ckr-T8-bea" sceneMemberID="viewController">
+                <viewController id="Ckr-T8-bea" customClass="ColorViewController" customModule="ColorSwitcherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AWo-OO-f5N">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,7 +174,7 @@
                     <navigationItem key="navigationItem" id="0Kt-kp-Fge">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="eKC-Cp-EZe">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="Dtk-xi-8kw"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="feV-qe-Iym"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
